@@ -1,0 +1,4 @@
+imageRegistry: boulnat
+dokcerImage: hello-ip
+dockerTag: v2
+
