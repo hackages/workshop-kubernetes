@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oven-fox-deploy
+spec:
+  selector:
+    matchLabels:
+      run: oven-fox
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: oven-fox
+    spec:
+      containers:
+      - name: oven-fox-container
+        image: boulnat/hello-ip:v2
+        ports:
+        - containerPort: 5000
+
